@@ -48,18 +48,30 @@ const FeelingBox = () => {
     <View style={styles.feelingBox}>
       <Text style={styles.para}> How are you feeling today?</Text>
       <View style={styles.container}>
-        <MiniBlock />
-        <MiniBlock />
-        <MiniBlock />
-        <MiniBlock />
-        <MiniBlock />
+        <MoodBlock1 />
+        <MoodBlock2 />
+        <MoodBlock3 />
+        <MoodBlock4 />
+        <MoodBlock5 />
       </View>
     </View>
   );
 };
 
-const MiniBlock = () => {
-  return <View style={styles.miniBlock}></View>;
+const MoodBlock1 = () => {
+  return <View style={[styles.miniBlock1, styles.miniBlock]}></View>;
+};
+const MoodBlock2 = () => {
+  return <View style={[styles.miniBlock2, styles.miniBlock]}></View>;
+};
+const MoodBlock3 = () => {
+  return <View style={[styles.miniBlock3, styles.miniBlock]}></View>;
+};
+const MoodBlock4 = () => {
+  return <View style={[styles.miniBlock4, styles.miniBlock]}></View>;
+};
+const MoodBlock5 = () => {
+  return <View style={[styles.miniBlock5, styles.miniBlock]}></View>;
 };
 
 const SessionBox = () => {
@@ -114,11 +126,11 @@ const Buttons = () => {
 const NavBar = () => {
   return (
     <View style={styles.navbar}>
-      <MiniBlock />
-      <MiniBlock />
-      <MiniBlock />
-      <MiniBlock />
-      <MiniBlock />
+      <MoodBlock />
+      <MoodBlock />
+      <MoodBlock />
+      <MoodBlock />
+      <MoodBlock />
     </View>
   );
 };
@@ -168,29 +180,40 @@ const styles = StyleSheet.create({
   feelingBox: {
     marginTop: 35,
     height: 120,
-    width: "85%",
+    width: "100%",
     flexDirection: "column",
     marginBottom: 10,
     // borderBottomColor : 'black',
     // borderWidth : 2,
   },
   container: {
-    width: "100%",
+    width: "95%",
     height: 100,
+    flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    flexDirection: "row",
-    marginTop: 60,
+    marginTop: 75,
+    paddingLeft : 10,
     // borderBottomColor : 'blue',
     // borderWidth : 2,
   },
   miniBlock: {
-    width: 50,
-    height: 50,
-    backgroundColor: "#AEAFF7",
-    borderRadius: "6px",
-    marginRight: "10px",
+    width: 55,
+    height: 55,
+    borderRadius: 16,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 2, 
+      height: 3,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 5, 
   },
+  miniBlock1 : {backgroundColor : '#C5EDAC'},
+  miniBlock2 : {backgroundColor : '#9EE5B9'},
+  miniBlock3 : {backgroundColor : '#99C2A2'},
+  miniBlock4 : {backgroundColor : '#739E82'},
+  miniBlock5 : {backgroundColor : '#2C5530'},
   sessionBlock: {
     width: "100%",
     height: 170,
@@ -198,6 +221,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#68B2A0",
     flexDirection: "row",
     marginTop: -200,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 3, 
+      height: 5,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 5, 
   },
   sessionInfo: {
     width: "60%",
