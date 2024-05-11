@@ -123,17 +123,17 @@ const Buttons = () => {
 };
 
 
-const NavBar = () => {
-  return (
-    <View style={styles.navbar}>
-      <MoodBlock />
-      <MoodBlock />
-      <MoodBlock />
-      <MoodBlock />
-      <MoodBlock />
-    </View>
-  );
-};
+// const NavBar = () => {
+//   return (
+//     <View style={styles.navbar}>
+//       <MoodBlock />
+//       <MoodBlock />
+//       <MoodBlock />
+//       <MoodBlock />
+//       <MoodBlock />
+//     </View>
+//   );
+// };
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
   },
   para: {
     marginBottom: -75,
-    marginTop: -220,
+    marginTop: -230,
     fontSize: 16,
     // borderBottomColor : 'black',
     // borderWidth : 2,
@@ -182,7 +182,6 @@ const styles = StyleSheet.create({
     height: 120,
     width: "100%",
     flexDirection: "column",
-    marginBottom: 10,
     // borderBottomColor : 'black',
     // borderWidth : 2,
   },
@@ -220,7 +219,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     backgroundColor: "#68B2A0",
     flexDirection: "row",
-    marginTop: -200,
+    marginTop: -210,
     shadowColor: '#000',
     shadowOffset: {
       width: 3, 
@@ -250,7 +249,7 @@ const styles = StyleSheet.create({
     justifyContent : 'center',
     // borderBottomColor : 'black',
     // borderWidth : 2,
-    marginTop : -5,
+    marginTop : -10,
   },
   row1: {
     flexDirection: 'row',
