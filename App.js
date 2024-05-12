@@ -1,16 +1,20 @@
 import React from 'react';
-import MiniBlockWrapper from '../app1/components/homePage';
-import NavBar from '../app1/components/navbar';
+// import MiniBlockWrapper from '../app1/components/homePage';
+// import NavBar from '../app1/components/navbar';
 // import Circle from '../app1/components/circularProgress';
+import StatisticPage from '../app1/components/statistics';
 
 import { View } from 'react-native';
+import NavBar from './components/navbar';
 
 const App = () => {
   return (
     <View style={{flex : 1}}>
-      <MiniBlockWrapper/>
-      <NavBar/>
+      {/* <MiniBlockWrapper/> */}
+      {/* <NavBar/> */}
       {/* <Circle/> */}
+      <StatisticPage/>
+      <NavBar/>
     </View>
   );
 };
