@@ -3,6 +3,7 @@ import React from 'react';
 // import NavBar from '../app1/components/navbar';
 // import Circle from '../app1/components/circularProgress';
 import StatisticPage from '../app1/components/statistics';
+import Sleep  from './components/sleep';
 
 import { View } from 'react-native';
 import NavBar from './components/navbar';
@@ -13,7 +14,8 @@ const App = () => {
       {/* <MiniBlockWrapper/> */}
       {/* <NavBar/> */}
       {/* <Circle/> */}
-      <StatisticPage/>
+      {/* <StatisticPage/> */}
+      <Sleep />
       <NavBar/>
     </View>
   );

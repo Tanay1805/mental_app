@@ -6,7 +6,7 @@ const Sleep = () => {
     <View style={styles.wrapper}>
       <View style={styles.meter}>
         <Text style={styles.metContent}>Sleep</Text>
-        <View style={{borderWidth:5,height:'70%', width: '50%',borderRadius:'100%',marginLeft:'25%',marginTop:30, borderColor:'#4949C9'}}></View>
+        <View style={{borderWidth:4,height:'60%', width: '38%',borderRadius:'100%',marginLeft:'31%',marginTop:30, borderColor:'#4949C9'}}></View>
       </View>
       <View style={{borderWidth:1, marginTop: 18,}}></View>
       <View style={styles.container}>
@@ -29,7 +29,7 @@ const Sleep = () => {
           </View>
           <View style={[styles.innerBox2, styles.quaBox]}>
             <Text style={styles.boxHeadings}>Quality</Text>
-            <Text style={{color : '#FFFFFE', fontWeight : 400, fontSize : 12, writingDirection : 'rtl'}}><Text style={styles.boxNums}>190</Text>{"\n"}Pounds</Text>
+            <Text style={{color : '#FFFFFE', fontWeight : 400, fontSize : 12, writingDirection : 'rtl', marginRight : 5}}><Text style={styles.boxNums}>190</Text>{"\n"}Pounds</Text>
           </View>
         </View>
       </View>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     },
     meter : {
       width : '100%',
-      height : '35%',
+      height : '30%',
       // backgroundColor : 'orange',
     },
     metContent : {
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
       borderRadius : 20
     },
     box1 : {
-      height : '75%',
+      height : '70%',
       backgroundColor : '#4949C9',
       borderRadius : 20,
     },
@@ -130,12 +130,12 @@ const styles = StyleSheet.create({
     timeBox : {
       backgroundColor : '#05B080',
       marginBottom : 15,
-      height : '47%',
+      height : '45%',
       padding : 20
     },
     quaBox : {
       backgroundColor : '#FFB36D',
-      height : '60%',
+      height : '62%',
       padding : 20
     },
   }
