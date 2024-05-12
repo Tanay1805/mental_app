@@ -91,9 +91,11 @@ const styles = StyleSheet.create({
     cylContainer : {
       display : 'flex',
       flexDirection : 'row',
+      alignItems : 'flex-end',
+      justifyContent : 'center',
       // borderColor : '#bbb',
       // borderWidth : 2,
-      height : '60%',
+      height : '55%',
       // margin : 10,
       // marginTop : '5%',
       // marginLeft : '2%',
