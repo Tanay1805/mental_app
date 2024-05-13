@@ -2,14 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet ,TouchableOpacity} from 'react-native';
 import { SafeAreaView } from 'react-native';
 
-const StyledDivision = () => {
+export default function StyledDivision(){
   const pressed = () => {
     // join now logic
   };
   return (
     <SafeAreaView style={styles.wrapper}>
         <Upcoming/>
-
         <Text style={{alignSelf : 'flex-start', marginLeft : 28, marginTop : 25, fontSize : 20, fontWeight : '500'}}>All Sessions</Text>
 
         <View style={styles.sessionContainer}>
@@ -182,4 +181,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default StyledDivision;
+// export default StyledDivision;

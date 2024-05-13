@@ -1,7 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Button,
+  SafeAreaView,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import Ionicons from '@expo/vector-icons/Ionicons';
 
-const MiniBlockWrapper = () => {
+export default function MiniBlockWrapper() {
+  const navigation = useNavigation();
   return (
     <View style={styles.wrapper}>
       <View>
@@ -17,12 +28,12 @@ const MiniBlockWrapper = () => {
         <SessionBox />
       </View>
       <View>
-        <Buttons/>
+        <Buttons />
       </View>
       {/* <NavBar /> */}
     </View>
   );
-};
+}
 
 const ProfileBar = () => {
   return (
@@ -90,7 +101,7 @@ const SessionBox = () => {
       </View>
       <View style={styles.imageBox}>
         <Image
-          source={require("../assets/sessions.png")}
+          source={require("../../assets/sessions.png")}
           style={styles.image}
         />
       </View>
@@ -98,9 +109,8 @@ const SessionBox = () => {
   );
 };
 
-
 const Buttons = () => {
-  return(
+  return (
     <View style={styles.buttonMain}>
       <View style={styles.row1}>
         <TouchableOpacity style={[styles.button, styles.button1]}>
@@ -122,22 +132,8 @@ const Buttons = () => {
   );
 };
 
-
-// const NavBar = () => {
-//   return (
-//     <View style={styles.navbar}>
-//       <MoodBlock />
-//       <MoodBlock />
-//       <MoodBlock />
-//       <MoodBlock />
-//       <MoodBlock />
-//     </View>
-//   );
-// };
-
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 1,
     width: "100%",
     height: "100%",
     // justifyContent: "center",
@@ -151,14 +147,14 @@ const styles = StyleSheet.create({
     height: 40,
     flexDirection: "row",
     // justifyContent: "space-evenly",
-    marginTop: "20%",
+    marginTop: "28%",
   },
   heading: {
     width: "100%",
     height: "28%",
     textAlign: "left",
-    marginTop: "10%",
-    marginBottom: 40,
+    marginTop: "4%",
+    marginBottom: '20%',
     // borderBottomColor : 'black',
     // borderWidth : 2,
   },
@@ -192,7 +188,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginTop: 75,
-    paddingLeft : 10,
+    paddingLeft: 10,
     // borderBottomColor : 'blue',
     // borderWidth : 2,
   },
@@ -200,19 +196,19 @@ const styles = StyleSheet.create({
     width: 55,
     height: 55,
     borderRadius: 16,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: {
-      width: 2, 
+      width: 2,
       height: 3,
     },
     shadowOpacity: 0.2,
-    shadowRadius: 5, 
+    shadowRadius: 5,
   },
-  miniBlock1 : {backgroundColor : '#C5EDAC'},
-  miniBlock2 : {backgroundColor : '#9EE5B9'},
-  miniBlock3 : {backgroundColor : '#99C2A2'},
-  miniBlock4 : {backgroundColor : '#739E82'},
-  miniBlock5 : {backgroundColor : '#2C5530'},
+  miniBlock1: { backgroundColor: "#C5EDAC" },
+  miniBlock2: { backgroundColor: "#9EE5B9" },
+  miniBlock3: { backgroundColor: "#99C2A2" },
+  miniBlock4: { backgroundColor: "#739E82" },
+  miniBlock5: { backgroundColor: "#2C5530" },
   sessionBlock: {
     width: "100%",
     height: 170,
@@ -220,13 +216,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#68B2A0",
     flexDirection: "row",
     marginTop: -210,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: {
-      width: 3, 
+      width: 3,
       height: 5,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 5, 
+    shadowRadius: 5,
   },
   sessionInfo: {
     width: "60%",
@@ -244,23 +240,23 @@ const styles = StyleSheet.create({
     height: 90,
   },
   buttonMain: {
-    width : '100%',
-    height : '45%',
-    justifyContent : 'center',
+    width: "100%",
+    height: "45%",
+    justifyContent: "center",
     // borderBottomColor : 'black',
     // borderWidth : 2,
-    marginTop : -10,
+    marginTop: '-1%',
   },
   row1: {
-    flexDirection: 'row',
+    flexDirection: "row",
     // alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     marginBottom: 5,
   },
   row2: {
-    flexDirection: 'row',
+    flexDirection: "row",
     // alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     marginTop: 10,
   },
   buttonBox: {
@@ -269,25 +265,25 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
     borderRadius: 16,
-    marginHorizontal : 6,
-    height : 70,
+    marginHorizontal: 6,
+    height: 70,
   },
-  button1 : {backgroundColor : '#469D89'},
-  button2 : {backgroundColor : '#74BF97'},
-  button3 : {backgroundColor : '#A4D6B6'},
-  buttonText1 : {
-    color : '#FFFFFE', 
-    fontWeight : 'bold',
-    fontSize : 16,
+  button1: { backgroundColor: "#469D89" },
+  button2: { backgroundColor: "#74BF97" },
+  button3: { backgroundColor: "#A4D6B6" },
+  buttonText1: {
+    color: "#FFFFFE",
+    fontWeight: "bold",
+    fontSize: 16,
   },
-  buttonText2 : {
-    color : '#573926', 
-    fontWeight : 'bold',
-    fontSize : 16,
+  buttonText2: {
+    color: "#573926",
+    fontWeight: "bold",
+    fontSize: 16,
   },
   navbar: {
     position: "absolute",
@@ -301,5 +297,3 @@ const styles = StyleSheet.create({
     marginLeft: -25,
   },
 });
-
-export default MiniBlockWrapper;

@@ -1,26 +1,37 @@
-import React from 'react';
-import MiniBlockWrapper from '../app1/components/homePage';
-import NavBar from '../app1/components/navbar';
-// import Circle from '../app1/components/circularProgress';
-import StatisticPage from '../app1/components/statistics';
-import Sleep  from './components/sleep';
-import StyledDivision from './components/sessions'
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import StyledDivision from "./screens/screens/sessions";
+import Sleep from "./screens/screens/sleep";
+import MiniBlockWrapper from './screens/screens/homePage';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
-import { View } from 'react-native';
+const Tab = createBottomTabNavigator();
 
-const App = () => {
-  return (
-    <View style={{flex : 1}}>
-      {/* <MiniBlockWrapper/> */}
-      {/* <NavBar/> */}
-      {/* <Circle/> */}
-      {/* <StatisticPage/> */}
-      {/* <Sleep /> */}
-      <StyledDivision/>
-      <NavBar/>
-    </View>
-  );
-};
-
-export default App;
-// 
+export default function App(){
+    return(
+        <NavigationContainer>
+            <Tab.Navigator screenOptions={{
+                tabBarShowLabel : false,
+                tabBarActiveTintColor : '#68B2A0',
+                tabBarInactiveTintColor : '#898B98',
+                tabBarStyle : {backgroundColor : '#EAEEF5'}
+            }}>
+                <Tab.Screen name="Home" component={MiniBlockWrapper} options={{
+                    tabBarIcon : ({ color }) => <Ionicons name="home" size={30} color={ color } style={{marginTop : 12}}/>, headerShown : false
+                }}/>
+                <Tab.Screen name="Sessions" component={StyledDivision} options={{
+                    tabBarIcon : ({ color }) => <Ionicons name="videocam" size={30}
+                    color={ color } style={{marginTop : 12}}/>, headerShown : false
+                }}/>
+                <Tab.Screen name="Music" component={StyledDivision} options={{
+                    tabBarIcon : ({ color }) => <Ionicons name="musical-notes" size={30}
+                    color={ color } style={{marginTop : 12}}/>, headerShown : false
+                }}/>
+                <Tab.Screen name="Sleep" component={Sleep} options={{
+                    tabBarIcon : ({ color }) => <Ionicons name="people" size={30}
+                    color={ color } style={{marginTop : 12}}/>, headerShown : false
+                }}/>
+            </Tab.Navigator>
+        </NavigationContainer>
+    )
+}

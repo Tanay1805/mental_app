@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
-const Sleep = () => {
+export default function Sleep(){
   return (
     <View style={styles.wrapper}>
       <View style={styles.meter}>
@@ -143,4 +143,4 @@ const styles = StyleSheet.create({
   }
 )
 
-export default Sleep;
+// export default Sleep;
