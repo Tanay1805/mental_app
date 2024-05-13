@@ -51,7 +51,7 @@ const Session = () =>{
 
                 <View style={styles.sessionButtons}>
                     <TouchableOpacity style={[styles.button]}><Text style={styles.buttonText}>Reschedule</Text></TouchableOpacity>
-                    <TouchableOpacity style={[styles.button2]}><Text style={[styles.buttonText, styles.buttonText2]}>Add to Calendar</Text></TouchableOpacity>
+                    <TouchableOpacity style={[styles.button2]}><Text style={[styles.buttonText, styles.buttonText2]} onPress={() => {alert("Added to Calendar!")}}>Add to Calendar</Text></TouchableOpacity>
                 </View>
             </View>
         </View>

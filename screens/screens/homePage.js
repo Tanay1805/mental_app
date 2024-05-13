@@ -9,10 +9,14 @@ import {
   SafeAreaView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+// import { createNativeStackNavigator } from "@react-navigation/native-stack";
+// import { NavigationContainer } from "@react-navigation/native";
 import Ionicons from '@expo/vector-icons/Ionicons';
+// import { FontAwesomeIcon } from "@fortawesome/free-solid-svg-icons";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+// const Stack = createNativeStackNavigator();
 
-export default function MiniBlockWrapper() {
-  const navigation = useNavigation();
+export default function MiniBlockWrapper( { navigation }) {
   return (
     <View style={styles.wrapper}>
       <View>
@@ -28,7 +32,7 @@ export default function MiniBlockWrapper() {
         <SessionBox />
       </View>
       <View>
-        <Buttons />
+        <Buttons navigation={navigation}/>
       </View>
       {/* <NavBar /> */}
     </View>
@@ -70,19 +74,29 @@ const FeelingBox = () => {
 };
 
 const MoodBlock1 = () => {
-  return <View style={[styles.miniBlock1, styles.miniBlock]}></View>;
+  return <View style={[styles.miniBlock1, styles.miniBlock]}>
+    <Ionicons name="happy-sharp" size={30} color={'#FEFEFE'}/>
+  </View>;
 };
 const MoodBlock2 = () => {
-  return <View style={[styles.miniBlock2, styles.miniBlock]}></View>;
+  return <View style={[styles.miniBlock2, styles.miniBlock]}>
+    <Ionicons name="medical-sharp" size={30} color={'#FEFEFE'}/>
+  </View>;
 };
 const MoodBlock3 = () => {
-  return <View style={[styles.miniBlock3, styles.miniBlock]}></View>;
+  return <View style={[styles.miniBlock3, styles.miniBlock]}>
+    <Ionicons name="thunderstorm-sharp" size={30} color={'#FEFEFE'}/>
+  </View>;
 };
 const MoodBlock4 = () => {
-  return <View style={[styles.miniBlock4, styles.miniBlock]}></View>;
+  return <View style={[styles.miniBlock4, styles.miniBlock]}>
+    <Ionicons name="flame-sharp" size={30} color={'#FEFEFE'}/>
+  </View>;
 };
 const MoodBlock5 = () => {
-  return <View style={[styles.miniBlock5, styles.miniBlock]}></View>;
+  return <View style={[styles.miniBlock5, styles.miniBlock]}>
+    <Ionicons name="sad-sharp" size={30} color={'#FEFEFE'}/>
+  </View>;
 };
 
 const SessionBox = () => {
@@ -109,11 +123,16 @@ const SessionBox = () => {
   );
 };
 
-const Buttons = () => {
+const Buttons = ({ navigation }) => {
+  // const navigation = useNavigation();
+
   return (
     <View style={styles.buttonMain}>
       <View style={styles.row1}>
-        <TouchableOpacity style={[styles.button, styles.button1]}>
+        <TouchableOpacity
+          style={[styles.button, styles.button1]}
+          onPress={() => navigation.navigate('Sleep')}
+        >
           <Ionicons name="moon" size={25} style={{marginTop : -1}} color={'#FEFEFE'}/>
           <Text style={styles.buttonText1}>Sleep</Text>
         </TouchableOpacity>
@@ -123,9 +142,12 @@ const Buttons = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.row2}>
-        <TouchableOpacity style={[styles.button, styles.button3]}>
-          <Ionicons name="mic" size={25} style={{marginTop : -1}} color={'#FEFEFE'}/>
-          <Text style={styles.buttonText2}>Podcast</Text>
+        <TouchableOpacity
+            style={[styles.button, styles.button1]}
+            onPress={() => navigation.navigate('Music')}
+          >
+            <Ionicons name="mic" size={25} style={{marginTop : -1}} color={'#FEFEFE'}/>
+            <Text style={styles.buttonText2}>Podcast</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, styles.button3]}>
           <Text style={styles.buttonText2}>Articles</Text>
@@ -206,6 +228,8 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 5,
+    justifyContent : 'center',
+    alignItems : 'center'
   },
   miniBlock1: { backgroundColor: "#C5EDAC" },
   miniBlock2: { backgroundColor: "#9EE5B9" },
