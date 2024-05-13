@@ -114,14 +114,17 @@ const Buttons = () => {
     <View style={styles.buttonMain}>
       <View style={styles.row1}>
         <TouchableOpacity style={[styles.button, styles.button1]}>
+          <Ionicons name="moon" size={25} style={{marginTop : -1}} color={'#FEFEFE'}/>
           <Text style={styles.buttonText1}>Sleep</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, styles.button2]}>
+          <Ionicons name="flash" size={25} style={{marginTop : -1}} color={'#FEFEFE'}/>
           <Text style={styles.buttonText1}>Activity</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.row2}>
         <TouchableOpacity style={[styles.button, styles.button3]}>
+          <Ionicons name="mic" size={25} style={{marginTop : -1}} color={'#FEFEFE'}/>
           <Text style={styles.buttonText2}>Podcast</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, styles.button3]}>
@@ -174,7 +177,7 @@ const styles = StyleSheet.create({
     // borderWidth : 2,
   },
   feelingBox: {
-    marginTop: 35,
+    marginTop: 25,
     height: 120,
     width: "100%",
     flexDirection: "column",
@@ -215,7 +218,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     backgroundColor: "#68B2A0",
     flexDirection: "row",
-    marginTop: -210,
+    marginTop: -205,
     shadowColor: "#000",
     shadowOffset: {
       width: 3,
@@ -265,8 +268,10 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
+    flexDirection  :'row',
     justifyContent: "center",
     alignItems: "center",
+    columnGap : 10,
     backgroundColor: "#DDDDDD",
     borderRadius: 16,
     marginHorizontal: 6,

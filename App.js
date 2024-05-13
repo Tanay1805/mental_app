@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import StyledDivision from "./screens/screens/sessions";
 import Sleep from "./screens/screens/sleep";
 import MiniBlockWrapper from './screens/screens/homePage';
+import MusicPage from './screens/screens/music';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
@@ -23,7 +24,7 @@ export default function App(){
                     tabBarIcon : ({ color }) => <Ionicons name="videocam" size={30}
                     color={ color } style={{marginTop : 12}}/>, headerShown : false
                 }}/>
-                <Tab.Screen name="Music" component={StyledDivision} options={{
+                <Tab.Screen name="Music" component={MusicPage} options={{
                     tabBarIcon : ({ color }) => <Ionicons name="musical-notes" size={30}
                     color={ color } style={{marginTop : 12}}/>, headerShown : false
                 }}/>

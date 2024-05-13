@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
       borderRadius : 20
     },
     box1 : {
-      height : '70%',
+      height : '72%',
       backgroundColor : '#4949C9',
       borderRadius : 20,
     },
